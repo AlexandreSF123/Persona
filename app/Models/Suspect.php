@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Suspect extends Model
 {
     use HasFactory;
+    protected $table = 'guest';
+    protected $fillable = ['nome'];
 }

@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class Guest extends Controller
+class GuestController extends Controller
 {
     function index(){ 
-        $guest = new \App\Models\Guest();
+        $guest = new \App\Models\GuestModel();
 
         return view('guest.index', ['guests'=>$guest::all()]);
     }
@@ -33,33 +33,33 @@ class Guest extends Controller
               ->withErrors($validator)
               ->withInput();
       }
-        $guest = new \App\Models\Guest();
+        $guest = new \App\Models\GuestModel();
         $guest::create($dados->all());
 
         //RECUPERANDO TODOS ALUNOS DO BANCO E ENVIANDO PARA A VIEW
 				
-        $guests = new \App\Models\Guest();
+        $guests = new \App\Models\GuestModel();
 
         return view('guest.index', ['success'=>'Cadastrado!', 'guests'=>$guests::all()]);
        
     }
     function remove(string $id) {
 
-        $guest = new \App\Models\Guest();
+        $guest = new \App\Models\GuestModel();
         $guest::destroy($id);
 
         return view('guest.index', ['success'=>'Removed!', 'guests'=>$guest::all()]);
 
     }
     function atualizar(string $id) {
-        $guest = new \App\Models\Guest();
+        $guest = new \App\Models\GuestModel();
         $guest = $guest::find($id);
 
         return view('guest.update', ['guest'=>$guest]);
     }
     function save(Request $dados) {
 
-        $guest = new \App\Models\Guest();
+        $guest = new \App\Models\GuestModel();
         $guest = $guest::find($dados->id);
         $guest->update($dados->all());
 
