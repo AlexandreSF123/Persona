@@ -17,7 +17,7 @@ class Suspect extends Controller
         $validator = Validator::make(
             $dados->all(),
               [
-                  'nome' => 'required|min:3|max:255',
+                  'name' => 'required|min:3|max:255',
               ],
               [
                   'nome.required' => 'O campo nome é obrigatório.',
