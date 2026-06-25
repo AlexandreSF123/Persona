@@ -1,5 +1,5 @@
 
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <div>
     <form action="{{ route('suspect.add') }}" method="post">
         @csrf
@@ -21,7 +21,7 @@
     </form>
     <table border="1">
         <tr>
-            <td>Nome do Suspeito</td>
+            <td>Name</td>
             <td colspan="2">Ações</td>
         </tr>
         @isset($suspects)
@@ -45,3 +45,5 @@
         @endisset
     
 </div>
+<a href="{{ route('guest.index') }}" class="btn btn-primary">Ver Guests</a>
+
