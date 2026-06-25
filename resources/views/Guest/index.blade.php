@@ -3,8 +3,8 @@
 <div>
     <form action="{{ route('guest.add') }}" method="post">
         @csrf
-        <label for="nome">Nome</label>
-        <input type="text" name="nome" id="nome" value="{{ old('nome') }}">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="{{ old('name') }}">
 
 
         <button type="submit">Salvar</button>
@@ -28,7 +28,7 @@
                 @foreach($guests as $guest)
                     <tr>
                         <td>
-                            <h3>{{ $guest->nome }}</h3>
+                            <h3>{{ $guest->name }}</h3>
                         </td>
                         <td>
                         <form action="{{ route('guest.remove', ['id' => $guest->id]) }}" method="GET">
@@ -36,7 +36,7 @@
                             </form>
                         </td>
                         <td>
-                        <form action="{{ route('guest.atualizar', ['id' => $guest->id]) }}" method="GET">
+                        <form action="{{ route('guest.update', ['id' => $guest->id]) }}" method="GET">
                                 <button type="submit">Atualizar</button>
                             </form>
                         </td>
@@ -45,3 +45,4 @@
         @endisset
     
 </div>
+<a href="{{ route('suspect.index') }}">Suspects</a>

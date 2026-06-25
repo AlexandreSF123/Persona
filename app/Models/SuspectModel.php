@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class GuestModel extends Model
+class SuspectModel extends Model
 {
     use HasFactory;
-    protected $table = 'guest';
+    protected $table = 'suspect';
     protected $fillable = ['name'];
 }

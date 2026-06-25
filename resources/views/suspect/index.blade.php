@@ -3,8 +3,8 @@
 <div>
     <form action="{{ route('suspect.add') }}" method="post">
         @csrf
-        <label for="nome">Nome</label>
-        <input type="text" name="nome" id="nome" value="{{ old('nome') }}">
+        <label for="name">Nome</label>
+        <input type="text" name="name" id="name" value="{{ old('name') }}">
 
 
         <button type="submit">Salvar</button>
@@ -21,14 +21,14 @@
     </form>
     <table border="1">
         <tr>
-            <td>Nome do Aluno</td>
+            <td>Nome do Suspeito</td>
             <td colspan="2">Ações</td>
         </tr>
-        @isset($alunos)
-                @foreach($alunos as $suspect)
+        @isset($suspects)
+                @foreach($suspects as $suspect)
                     <tr>
                         <td>
-                            <h3>{{ $suspect->nome }}</h3>
+                            <h3>{{ $suspect->name }}</h3>
                         </td>
                         <td>
                         <form action="{{ route('suspect.remove', ['id' => $suspect->id]) }}" method="GET">
@@ -36,7 +36,7 @@
                             </form>
                         </td>
                         <td>
-                        <form action="{{ route('suspect.atualizar', ['id' => $suspect->id]) }}" method="GET">
+                        <form action="{{ route('suspect.update', ['id' => $suspect->id]) }}" method="GET">
                                 <button type="submit">Atualizar</button>
                             </form>
                         </td>
