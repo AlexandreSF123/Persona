@@ -10,11 +10,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('guest', function (Blueprint $table) {
-            $table->id();            
+            $table->id();
+            $table->timestamps();
             $table->string('name');
-            $table->string('idade');
+            $table->string('age');
+            $table->string('height');
+            $table->string('weight');
+            $table->string('nacionality');
+            $table->string('work');
 
-            /* $table->string('nome', 100); quantidade de 100 caracteres */
         });
     }
 

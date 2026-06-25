@@ -12,10 +12,10 @@ Route::post('/save', [App\Http\Controllers\GuestController::class, 'save'])->nam
 });
 
 Route::prefix('/suspect')->group(function(){
-    Route::get('/index', [App\Http\Controllers\Suspect::class, 'suspect']);
-    Route::post('/add', [App\Http\Controllers\Suspect::class, 'suspect']);
-    Route::get('/remove/{id}', [App\Http\Controllers\Suspect::class, 'suspect']);
-    Route::get('/update/{id}', [App\Http\Controllers\Suspect::class, 'suspect']);
-    Route::post('/save', [App\Http\Controllers\Suspect::class, 'suspect']);
+    Route::get('/index', [App\Http\Controllers\SuspectController::class, 'index'])->name('suspect.index');
+    Route::post('/add', [App\Http\Controllers\SuspectController::class, 'add'])->name('suspect.add');
+    Route::get('/remove/{id}', [App\Http\Controllers\SuspectController::class, 'remove'])->name('suspect.remove');
+    Route::get('/update/{id}', [App\Http\Controllers\SuspectController::class, 'update'])->name('suspect.update');
+    Route::post('/save', [App\Http\Controllers\SuspectController::class, 'save'])->name('suspect.save');
     });
 

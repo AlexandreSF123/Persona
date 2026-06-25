@@ -36,7 +36,7 @@
                             </form>
                         </td>
                         <td>
-                        <form action="{{ route('guest.atualizar', ['id' => $guest->id]) }}" method="GET">
+                        <form action="{{ route('guest.update', ['id' => $guest->id]) }}" method="GET">
                                 <button type="submit">Atualizar</button>
                             </form>
                         </td>
@@ -45,3 +45,4 @@
         @endisset
     
 </div>
+<a href="{{ route('suspect.index') }}">Suspects</a>
