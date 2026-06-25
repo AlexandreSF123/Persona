@@ -86,6 +86,7 @@
         @endisset
     
 </div>
+<<<<<<< HEAD
 
 <a href="{{ route('suspect.index') }}" class="btn btn-primary">Ver Suspects</a>
 
