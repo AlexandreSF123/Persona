@@ -13,7 +13,7 @@ return new class extends Migration
             $table->id();            
             $table->string('name');
             $table->string('idade');
-            $table->timestamps();
+
             /* $table->string('nome', 100); quantidade de 100 caracteres */
         });
     }
