@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('weight');
             $table->string('nacionality');
             $table->string('work');
-            $table->string('skin_color');
+          
         });
     }
 
