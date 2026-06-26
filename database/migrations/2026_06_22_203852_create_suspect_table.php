@@ -14,7 +14,13 @@ return new class extends Migration
         Schema::create('suspect', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('nome');
+            $table->string('name');
+            $table->string('age');
+            $table->string('skin_color');
+            $table->string('height');
+            $table->string('weight');
+            $table->string('nacionality');
+            $table->string('work');
         });
     }
 
@@ -23,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+           Schema::dropIfExists('suspect');
     }
 };

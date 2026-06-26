@@ -46,9 +46,36 @@
         @csrf
         <label for="name">Name</label>
         <input type="text" name="name" id="name" value="{{ old('name') }}">
+ <br>
+ <br>
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" value="{{ old('age') }}">
+ <br>
+ <br>
+        <label for="height">Height</label>
+        <input type="number" name="height" id="height" value="{{ old('height') }}">
+ <br>
+ <br>
+        <label for="weight">Weight</label>
+        <input type="number" name="weight" id="weight" value="{{ old('weight') }}">
+ <br>
+ <br>
+        <label for="nacionality">Nacionality</label>
+        <input type="text" name="nacionality" id="nacionality" value="{{ old('nacionality') }}">
+<br>
+<br>
+        <label for="work">Work</label>
+        <input type="text" name="work" id="work" value="{{ old('work') }}">
+ <br>
+ <br>
+        <label for="skin_color">Skin Color</label>
+        <input type="text" name="skin_color" id="skin_color" value="{{ old('skin_color') }}">
+ <br>
+ <br>
 
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <hr>
 
-        <button type="submit">Salvar</button>
         @isset($success)
             <h1>{{ $success }}</h1>
         @endisset
@@ -60,25 +87,56 @@
             </ul>
         @endif
     </form>
-    <table border="1">
+
+    <table border="2">
         <tr>
             <td>Name</td>
+            <td>Age</td>
+            <td>Height</td>
+            <td>Weight</td>
+            <td>Nacionality</td>
+            <td>Work</td>
             <td colspan="2">Ações</td>
         </tr>
         @isset($guests)
                 @foreach($guests as $guest)
                     <tr>
                         <td>
-                            <h3>{{ $guest->name }}</h3>
+                            <h5>{{ $guest->name }}</h5>
                         </td>
+
+                        <td>
+                            <h5>{{ $guest->age }}</h5>
+                        </td>
+
+                        <td>
+                            <h5>{{ $guest->work }}</h5>
+                        </td>
+
+                        <td>
+                            <h5>{{ $guest->height }}</h5>
+                        </td>
+
+                        <td>
+                            <h5>{{ $guest->weight }}</h5>
+                        </td>
+
+                        <td>
+                            <h5>{{ $guest->nacionality }}</h5>
+                        </td>
+
+                        <td>
+                            <h5>{{ $guest->skin_color }}</h5>
+                        </td>
+
                         <td>
                         <form action="{{ route('guest.remove', ['id' => $guest->id]) }}" method="GET">
-                                <button type="submit">Remover</button>
+                                <button type="submit">Remove</button>
                             </form>
                         </td>
                         <td>
                         <form action="{{ route('guest.update', ['id' => $guest->id]) }}" method="GET">
-                                <button type="submit">Atualizar</button>
+                                <button type="submit">Update</button>
                             </form>
                         </td>
                     </tr>
@@ -86,7 +144,6 @@
         @endisset
     
 </div>
-<<<<<<< HEAD
-
-<a href="{{ route('suspect.index') }}" class="btn btn-primary">Ver Suspects</a>
-
+<br>
+<a href="{{ route('suspect.index') }}" class="btn btn-primary">Check the Suspects</a>
+<hr>

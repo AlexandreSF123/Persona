@@ -9,5 +9,6 @@ class GuestModel extends Model
 {
     use HasFactory;
     protected $table = 'guest';
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'age', 'height', 'weight', 'nacionality', 'work', 'skin_color'];
+   
 }

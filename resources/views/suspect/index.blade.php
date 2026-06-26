@@ -45,5 +45,5 @@
         @endisset
     
 </div>
-<a href="{{ route('guest.index') }}" class="btn btn-primary">Ver Guests</a>
+<a href="{{ route('guest.index') }}" class="btn btn-primary">Check Guests</a>
 

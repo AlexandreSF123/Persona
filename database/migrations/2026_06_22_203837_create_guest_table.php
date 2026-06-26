@@ -14,11 +14,12 @@ return new class extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('age');
+            $table->string('skin_color');
             $table->string('height');
             $table->string('weight');
             $table->string('nacionality');
             $table->string('work');
-
+            $table->string('skin_color');
         });
     }
 
