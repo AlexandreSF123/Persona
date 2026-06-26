@@ -12,15 +12,15 @@
  <br>
  <br>
         <label for="age">Age</label>
-        <input type="number" name="age" id="age" value="{{ $suspect->age ?? old('age') }}">
+        <input type="text" name="age" id="age" value="{{ $suspect->age ?? old('age') }}">
  <br>
  <br>
         <label for="height">Height</label>
-        <input type="number" name="height" id="height" value="{{ $suspect->height ?? old('height') }}">
+        <input type="text" name="height" id="height" value="{{ $suspect->height ?? old('height') }}">
  <br>
  <br>
         <label for="weight">Weight</label>
-        <input type="number" name="weight" id="weight" value="{{ $suspect->weight ?? old('weight') }}">
+        <input type="text" name="weight" id="weight" value="{{ $suspect->weight ?? old('weight') }}">
  <br>
  <br>
         <label for="nacionality">Nacionality</label>
